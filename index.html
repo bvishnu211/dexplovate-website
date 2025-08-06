@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexplovate Pvt Ltd - MedTech Innovation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .hero-section {
+            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Purple gradient */
+            color: white;
+            padding: 8rem 1rem;
+            text-align: center;
+        }
+        .section-heading {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* gray-900 */
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: #6366f1; /* Indigo-500 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 600; /* font-semibold */
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #4f46e5; /* Indigo-600 */
+        }
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 500; /* font-medium */
+            color: #4b5563; /* gray-600 */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .nav-link:hover {
+            background-color: #e0e7ff; /* Indigo-100 */
+            color: #4f46e5; /* Indigo-600 */
+        }
+        .logo-svg {
+            color: #6366f1; /* Indigo-600 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <a href="index.html" class="flex items-center mb-4 md:mb-0 cursor-pointer">
+                <!-- Company Logo as a button -->
+                <svg class="h-10 w-10 logo-svg" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                </svg>
+                <span class="ml-3 text-2xl font-bold text-gray-800">Dexplovate</span>
+            </a>
+            <nav class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="product.html" class="nav-link">Our Product</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Added padding-top to account for fixed header -->
+        <!-- Hero Section -->
+        <section id="home-section" class="hero-section">
+            <div class="container mx-auto">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                    Redefining Health Through Intelligent Technology
+                </h1>
+                <p class="text-lg md:text-xl font-light max-w-3xl mx-auto mb-8">
+                    Dexplovate is a MedTech company using AI and hardware innovation to build purpose-driven solutions for the management and care of chronic diseases.
+                </p>
+                <a href="product.html" class="cta-button inline-block text-lg">Discover Our Solutions</a>
+            </div>
+        </section>
+
+        <!-- Our Vision Section -->
+        <section id="vision" class="py-16 px-4">
+            <div class="container mx-auto">
+                <h2 class="section-heading">Our Vision</h2>
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-center">
+                    To redefine chronic disease management, building a foundation of trust with every patient by providing clinically reliable, user-friendly solutions that become their secure and constant companion.
+                </p>
+            </div>
+        </section>
+
+        <!-- Our Achievements Section -->
+        <section id="achievements" class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="section-heading">Our Achievements</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">NIDHI-PRAYAS Grant</h3>
+                        <p class="text-gray-600">Awarded ₹10,00,000 from AIC-CCMB, a Tier-1 Biomedical incubator, supporting product development and validation.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">AICTE-YUKTI Recognition</h3>
+                        <p class="text-gray-600">Secured ₹3,00,000 from a national initiative promoting student innovation and entrepreneurship.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">IIT Hyderabad Program</h3>
+                        <p class="text-gray-600">Received ₹1,00,000 funding and mentorship from IIT Hyderabad's technology startup program.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">AHUB Grant</h3>
+                        <p class="text-gray-600">Obtained ₹20,000 from Andhra Pradesh Startup Hub, a government initiative accelerating startups.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">IIM Bangalore NSRCEL Accelerator</h3>
+                        <p class="text-gray-600">Selected for India’s top incubator's 5-month accelerator program, enabling rapid scaling and growth.</p>
+                    <div class="card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Functional Prototype Developed</h3>
+                        <p class="text-gray-600">Successfully completed Proof of Concept (PoC) with a fully functional hardware and software prototype for respiratory monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-16 px-4 text-center">
+            <div class="container mx-auto bg-indigo-100 rounded-xl p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-indigo-800 mb-4">
+                    Ready to Experience Proactive Health Management?
+                </h2>
+                <p class="text-lg text-indigo-700 mb-8 max-w-2xl mx-auto">
+                    Join Dexplovate in our mission to transform chronic disease care. Learn how our intelligent solutions can bring clarity, control, and peace of mind.
+                </p>
+                <a href="contact.html" class="cta-button inline-block text-lg">Contact Us to Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-16">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2025 Dexplovate Pvt Ltd. All rights reserved.</p>
+            <p class="mt-2">Building MedTech products with the help of AI.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
