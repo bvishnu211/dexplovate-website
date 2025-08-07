@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexplovate - Our Product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .section-heading {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* gray-900 */
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .sub-section-heading {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 600; /* font-semibold */
+            color: #1f2937; /* gray-900 */
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 500; /* font-medium */
+            color: #4b5563; /* gray-600 */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .nav-link:hover {
+            background-color: #e0e7ff; /* Indigo-100 */
+            color: #4f46e5; /* Indigo-600 */
+        }
+        .logo-svg {
+            color: #6366f1; /* Indigo-600 */
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <a href="index.html" class="flex items-center mb-4 md:mb-0 cursor-pointer">
+                <!-- Company Logo -->
+                <span class="ml-3 text-2xl font-bold text-gray-800">Dexplovate</span>
+            </a>
+            <nav class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="product.html" class="nav-link">Our Product</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Added padding-top to account for fixed header -->
+        <div class="container mx-auto">
+            <h1 class="section-heading">Our Product</h1>
+
+            <!-- Our Promise to You Section -->
+            <section id="our-promise" class="mb-16">
+                <h2 class="sub-section-heading">Our Promise to You</h2>
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        From our research, we've built a solution grounded in these core value propositions that empower doctors, patients, and caregivers with structured, real-time health data to enable proactive, evidence-based chronic disease care.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-left space-y-2">
+                        <li>Eliminates guesswork through objective symptom tracking and accessible medical records.</li>
+                        <li>Makes chronic disease monitoring effort-independent, unlike traditional subjective methods.</li>
+                        <li>Helps achieve and maintain symptom control.</li>
+                        <li>Ensures faster clinical intervention, better treatment decisions, and enhanced patient confidence.</li>
+                    </ul>
+                    <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                        Beyond the commercial lens, we want to genuinely solve the daily struggles of those with chronic conditions, giving them the freedom to live without fear. Every unhindered breath, every moment of peace, is our success metric. When a patient smiles knowing they’re finally in control, that’s the moment our product truly wins.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Introduction to Product Section -->
+            <section id="introduction-to-product">
+                <h2 class="sub-section-heading">Introducing AIR: Your Secure Companion for Proactive Asthma Care</h2>
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 max-w-5xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-center md:space-x-8 mb-8">
+                        <div class="md:w-1/2 mb-6 md:mb-0">
+                            <img src="AIR-Image.png" alt="AIR Device" class="product-image">
+                        </div>
+                        <div class="md:w-1/2 text-left">
+                            <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                                AIR – Asthmatics In Rescue is a purpose-driven MedTech solution designed to empower patients, caregivers, and medical professionals with the clarity and confidence needed to manage asthma effectively. Our mission, born from a personal journey, is to transform the daily struggle with asthma into a story of control and freedom.
+                            </p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">The Problem We Solve: Bridging the Inter-Visit Gap</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Asthma is a chronic disease where the severity is often dangerously understated, leaving patients undertreated and vulnerable to long-term health risks like airway remodeling. The critical gap between doctor visits is a period of guesswork, where symptoms are subjectively tracked and vital data is lost. AIR is engineered to fill this gap, providing objective, continuous monitoring that gives you a complete picture of asthma control.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 text-left">How AIR Works: Effort-Independent Monitoring</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4 text-left">
+                        Our compact, user-friendly device is simply placed on the patient's chest or spine when they feel symptomatic. It requires no complex technique or expertise, making it ideal for children and caregivers.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-700 text-left space-y-2 mb-6">
+                        <li>Objective Symptom Tracking: AIR’s hardware captures vital signs including heart rate, SpO₂, respiratory rate, and body temperature.</li>
+                        <li>Intelligent Lung Sound Analysis: The software module uses advanced signal processing to accurately extract abnormal lung sounds, transforming this data into objective clinical insights.</li>
+                        <li>Real-time Health Data: All data is securely synchronized to a cloud-based platform, providing a Symptom Control Assessment Sheet based on GINA guidelines.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-16">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2025 Dexplovate Pvt Ltd. All rights reserved.</p>
+            <p class="mt-2">Building MedTech products with the help of AI.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
