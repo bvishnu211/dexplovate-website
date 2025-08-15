@@ -58,6 +58,141 @@
     <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
             <a href="index.html" class="flex items-center mb-4 md:mb-0 cursor-pointer">
+                <!-- Company Logo as a button -->
+
+                <img src="Dex-logo.png" alt="Logo" class="product-image" width="170" height="200">
+            </a>
+            <nav class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="product.html" class="nav-link">Our Product</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Added padding-top to account for fixed header -->
+        <div class="container mx-auto">
+            <h1 class="section-heading">About Us</h1>
+
+            <!-- One-sentence company description -->
+            <section class="mb-16">
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-center">
+                    Dexplovate is a MedTech company using AI and hardware innovation to build purpose-driven solutions for the management and care of chronic diseases.
+                </p>
+            </section>
+
+            <!-- Our Mission Section -->
+            <section id="about-mission" class="mb-16 bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Our Mission</h2>
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-center">
+                    To build a suite of AI and hardware solutions that transform a patient's lived experience into actionable data, empowering medical professionals to deliver timely and precise care.
+                </p>
+            </section>
+
+            <!-- Our Story Section -->
+            <section id="about-story" class="mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Our Story</h2>
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-center">
+                    Our journey began with a deeply personal experience during the COVID-19 pandemic, witnessing the silent struggle and helplessness of loved ones battling respiratory disorders. The pain of seeing them gasp for breath, often without a doctor nearby, ignited a fundamental question: "How can we map the invisible suffering that a chronic attack brings, especially when no medical professional is around?" This profound challenge became the genesis of Dexplovate. We assembled a dedicated team, united by a mission to reduce the burden of chronic diseases, starting naturally with asthma due to our close understanding of its impact. Their stories, resilience, and hope became the driving force behind our commitment to building a secure experience that promises patients they won’t be alone in their distress.
+                </p>
+            </section>
+
+            <!-- Team Members Section -->
+            <section id="team" class="py-8">
+                <h2 class="section-heading">Meet Our Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="team-member-card">
+                        <img src="https://placehold.co/120x120/6366f1/ffffff?text=Suchandrahas" alt="Suchandrahas Medamalli" class="team-member-image">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Suchandrahas Medamalli</h3>
+                        <p class="text-indigo-600 font-medium mb-2">Founder</p>
+                    </div>
+                    <div class="team-member-card">
+                        <img src="https://placehold.co/120x120/6366f1/ffffff?text=Vishnu" alt="Vishnu Narasimha Raju Bhupatiraju" class="team-member-image">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Vishnu Narasimha Raju Bhupathiraju</h3>
+                        <p class="text-indigo-600 font-medium mb-2">Co-founder</p>
+                    </div>
+                    <div class="team-member-card">
+                        <img src="https://placehold.co/120x120/6366f1/ffffff?text=Hari" alt="Hari Goutham Sai Potnuru" class="team-member-image">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hari Goutham Sai Potunuru</h3>
+                        <p class="text-indigo-600 font-medium mb-2">Co-founder</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4 mt-16">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2025 Dexplovate Pvt Ltd. All rights reserved.</p>
+            <p class="mt-2">Building MedTech products with the help of AI.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexplovate - About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .section-heading {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* gray-900 */
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .nav-link {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-weight: 500; /* font-medium */
+            color: #4b5563; /* gray-600 */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .nav-link:hover {
+            background-color: #e0e7ff; /* Indigo-100 */
+            color: #4f46e5; /* Indigo-600 */
+        }
+        .logo-svg {
+            color: #6366f1; /* Indigo-600 */
+        }
+        .team-member-card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .team-member-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* rounded-full */
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid #6366f1; /* Indigo-500 border */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <a href="index.html" class="flex items-center mb-4 md:mb-0 cursor-pointer">
                 <!-- Company Logo -->
                 <span class="ml-3 text-2xl font-bold text-gray-800">Dexplovate</span>
             </a>
