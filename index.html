@@ -15,10 +15,16 @@
             color: #333;
         }
         .hero-section {
-            background: linear-gradient(to right, #6366f1, #8b5cf6); /* Indigo to Purple gradient */
-            color: white;
+            background-image: url('homebg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: rgb(29, 26, 26);
+            height: 15px
             padding: 8rem 1rem;
             text-align: center;
+        }
+        .hero-overlay {
+            padding: 8rem 1rem;
         }
         .section-heading {
             font-size: 2.25rem; /* text-4xl */
@@ -56,9 +62,6 @@
             background-color: #e0e7ff; /* Indigo-100 */
             color: #4f46e5; /* Indigo-600 */
         }
-        .logo-svg {
-            color: #6366f1; /* Indigo-600 */
-        }
     </style>
 </head>
 <body>
@@ -68,8 +71,8 @@
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
             <a href="index.html" class="flex items-center mb-4 md:mb-0 cursor-pointer">
                 <!-- Company Logo as a button -->
+                <img src="Dex-logo.png" alt="Logo" class="product-image1" width="170" height="200">
 
-                <img src="Dex-logo.png" alt="Logo" class="product-image" width="200" height="200">
             </a>
             <nav class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
                 <a href="index.html" class="nav-link">Home</a>
@@ -83,19 +86,21 @@
     <main class="pt-20"> <!-- Added padding-top to account for fixed header -->
         <!-- Hero Section -->
         <section id="home-section" class="hero-section">
-            <div class="container mx-auto">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-                    Redefining Health Through Intelligent Technology
-                </h1>
-                <p class="text-lg md:text-xl font-light max-w-3xl mx-auto mb-8">
-                    Dexplovate is a MedTech company using AI and hardware innovation to build purpose-driven solutions for the management and care of chronic diseases.
-                </p>
-                <a href="product.html" class="cta-button inline-block text-lg">Discover Our Solutions</a>
+            <div class="hero-overlay">
+                <div class="container mx-auto">
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                        Redefining Health Through Intelligent Technology
+                    </h1>
+                    <p class="text-lg md:text-xl font-light max-w-3xl mx-auto mb-8">
+                        Dexplovate is a MedTech company using AI and hardware innovation to build purpose-driven solutions for the management and care of chronic diseases.
+                    </p>
+                    <a href="product.html" class="cta-button inline-block text-lg">Discover Our Solutions</a>
+                </div>
             </div>
         </section>
 
         <!-- Our Vision Section -->
-        <section id="vision" class="py-16 px-4">
+        <section id="vision" class="py-20 px-4">
             <div class="container mx-auto">
                 <h2 class="section-heading">Our Vision</h2>
                 <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed text-center">
@@ -139,11 +144,11 @@
 
         <!-- Call to Action Section -->
         <section class="py-16 px-4 text-center">
-            <div class="container mx-auto bg-indigo-100 rounded-xl p-8 md:p-12">
-                <h2 class="text-3xl font-bold text-indigo-800 mb-4">
+            <div class="container mx-auto rounded-xl py-12" style="background-color: #b7a9dd;">
+                <h2 class="text-3xl font-bold text-white mb-4">
                     Ready to Experience Proactive Health Management?
                 </h2>
-                <p class="text-lg text-indigo-700 mb-8 max-w-2xl mx-auto">
+                <p class="text-lg text-white mb-8 max-w-2xl mx-auto">
                     Join Dexplovate in our mission to transform chronic disease care. Learn how our intelligent solutions can bring clarity, control, and peace of mind.
                 </p>
                 <a href="contact.html" class="cta-button inline-block text-lg">Contact Us to Learn More</a>
