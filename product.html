@@ -46,12 +46,22 @@
             max-width: 100%;
             height: auto;
             border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.192)
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
+        /* Mobile menu styling */
+        @media (max-width: 767px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+        /* For images to be clickable */
         .product-image1 {
-            max-width: 100%;
-            height: auto;
-            border-radius: 0.75rem; /* rounded-xl */
+            cursor: pointer;
         }
     </style>
 </head>
@@ -59,13 +69,21 @@
 
     <!-- Navigation Bar -->
     <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-            <a href="index.html" class="flex items-center mb-4 md:mb-0 cursor-pointer">
-                <!-- Company Logo as a button -->
-
+        <div class="container mx-auto flex items-center justify-between px-4">
+            <!-- Logo (always visible) -->
+            <a href="index.html" class="flex items-center cursor-pointer">
                 <img src="Dex-logo.png" alt="Logo" class="product-image1" width="170" height="200">
             </a>
-            <nav class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+
+            <!-- Hamburger menu button (visible on mobile) -->
+            <button id="hamburger-menu" class="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            
+            <!-- Navigation Links (hidden on mobile by default) -->
+            <nav id="nav-links" class="nav-menu md:flex flex-col md:flex-row items-center justify-end space-x-0 md:space-x-6 space-y-4 md:space-y-0 mt-4 md:mt-0">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="product.html" class="nav-link">Our Product</a>
                 <a href="about.html" class="nav-link">About Us</a>
@@ -74,8 +92,8 @@
         </div>
     </header>
 
-    <main class="pt-20"> <!-- Added padding-top to account for fixed header -->
-        <div class="container mx-auto">
+    <main class="pt-32"> <!-- Added padding-top to account for fixed header -->
+        <div class="container mx-auto px-4">
             <h1 class="section-heading">Our Product</h1>
 
             <!-- Our Promise to You Section -->
@@ -103,7 +121,8 @@
                 <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 max-w-5xl mx-auto">
                     <div class="flex flex-col md:flex-row items-center md:space-x-8 mb-8">
                         <div class="md:w-1/2 mb-6 md:mb-0">
-                            <img src="AIR-Image.png" alt="AIR Device" class="product-image" >
+                            <!-- Image URL has been replaced with the new image file -->
+                            <img src="AIR-Image.png" alt="AIR Device" class="product-image">
                         </div>
                         <div class="md:w-1/2 text-left">
                             <p class="text-lg text-gray-700 leading-relaxed mb-4">
@@ -138,5 +157,13 @@
         </div>
     </footer>
 
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

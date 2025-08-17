@@ -42,13 +42,25 @@
             padding: 1.5rem;
             text-align: center;
         }
-        .team-member-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%; /* rounded-full */
-            object-fit: cover;
-            margin: 0 auto 1rem;
-            border: 3px solid #6366f1; /* Indigo-500 border */
+        .team-section {
+            background-color: #f9fafb; /* Light gray background to make section stand out */
+            padding: 3rem 1rem;
+            border-radius: 1rem;
+        }
+        /* Mobile menu styling */
+        @media (max-width: 767px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+        /* For images to be clickable */
+        .product-image1 {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -56,13 +68,21 @@
 
     <!-- Navigation Bar -->
     <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-            <a href="index.html" class="flex items-center mb-4 md:mb-0 cursor-pointer">
-                <!-- Company Logo as a button -->
-
-                <img src="Dex-logo.png" alt="Logo" class="product-image" width="170" height="200">
+        <div class="container mx-auto flex items-center justify-between px-4">
+            <!-- Logo (always visible) -->
+            <a href="index.html" class="flex items-center cursor-pointer">
+                <img src="Dex-logo.png" alt="Logo" class="product-image1" width="170" height="200">
             </a>
-            <nav class="flex flex-wrap justify-center md:justify-end space-x-4 md:space-x-6">
+
+            <!-- Hamburger menu button (visible on mobile) -->
+            <button id="hamburger-menu" class="md:hidden text-gray-500 hover:text-gray-900 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            
+            <!-- Navigation Links (hidden on mobile by default) -->
+            <nav id="nav-links" class="nav-menu md:flex flex-col md:flex-row items-center justify-end space-x-0 md:space-x-6 space-y-4 md:space-y-0 mt-4 md:mt-0">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="product.html" class="nav-link">Our Product</a>
                 <a href="about.html" class="nav-link">About Us</a>
@@ -71,8 +91,8 @@
         </div>
     </header>
 
-    <main class="pt-20"> <!-- Added padding-top to account for fixed header -->
-        <div class="container mx-auto">
+    <main class="pt-32"> <!-- Increased padding-top to push content down -->
+        <div class="container mx-auto px-4">
             <h1 class="section-heading">About Us</h1>
 
             <!-- One-sentence company description -->
@@ -99,23 +119,22 @@
             </section>
 
             <!-- Team Members Section -->
-            <section id="team" class="py-8">
-                <h2 class="section-heading">Meet Our Team</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="team-member-card">
-                        <img src="https://placehold.co/120x120/6366f1/ffffff?text=Suchandrahas" alt="Suchandrahas Medamalli" class="team-member-image">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Suchandrahas Medamalli</h3>
-                        <p class="text-indigo-600 font-medium mb-2">Founder</p>
-                    </div>
-                    <div class="team-member-card">
-                        <img src="https://placehold.co/120x120/6366f1/ffffff?text=Vishnu" alt="Vishnu Narasimha Raju Bhupatiraju" class="team-member-image">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Vishnu Narasimha Raju Bhupathiraju</h3>
-                        <p class="text-indigo-600 font-medium mb-2">Co-founder</p>
-                    </div>
-                    <div class="team-member-card">
-                        <img src="https://placehold.co/120x120/6366f1/ffffff?text=Hari" alt="Hari Goutham Sai Potnuru" class="team-member-image">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Hari Goutham Sai Potunuru</h3>
-                        <p class="text-indigo-600 font-medium mb-2">Co-founder</p>
+            <section id="team" class="py-8 team-section">
+                <div class="container mx-auto">
+                    <h2 class="section-heading">Meet Our Team</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="team-member-card">
+                            <h3 class="text-2xl font-extrabold text-gray-800 mb-2">Suchandrahas<br> Medamalli</h3>
+                            <p class="text-indigo-600 font-medium mb-2">Founder & System Architect</p>
+                        </div>
+                        <div class="team-member-card">
+                            <h3 class="text-2xl font-extrabold text-gray-800 mb-2">Vishnu Narasimha Raju Bhupathiraju</h3>
+                            <p class="text-indigo-600 font-medium mb-2">Co-founder & Technical Lead</p>
+                        </div>
+                        <div class="team-member-card">
+                            <h3 class="text-2xl font-extrabold text-gray-800 mb-2">Hari Goutham Sai<br> Potunuru</h3>
+                            <p class="text-indigo-600 font-medium mb-2">Co-founder & Business Development Head</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -130,5 +149,13 @@
         </div>
     </footer>
 
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
